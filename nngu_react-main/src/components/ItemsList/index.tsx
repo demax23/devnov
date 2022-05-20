@@ -1,5 +1,4 @@
 import React from 'react';
-import { isEnumDeclaration } from 'typescript';
 import Item from '../Item';
 import style from './ItemsList.module.scss';
 
@@ -7,45 +6,45 @@ const ItemsMock = [
   {
     id: 1,
     itemName: 'Ботинки',
-    itemDescreption: 'Смотри какие потрясающие ботинки',
-    price: 10000,
+    itemDescription: 'Смотрите, какие потрясающие ботинки',
+    price: 70000,
   },
   {
     id: 2,
     itemName: 'Шапка',
-    itemDescreption: 'Смотри какие потрясающие шапки',
-    price: 50000,
+    itemDescription: 'Очень красивая шапка',
+    price: 1000,
   },
   {
     id: 3,
     itemName: 'Платье',
-    itemDescreption: 'Смотри какие потрясающие платья',
-    price: 90000,
+    itemDescription: 'Лучшее платье на свете',
+    price: 20000,
   },
   {
     id: 4,
-    itemName: 'Ботинки',
-    itemDescreption: 'Смотри какие потрясающие ботинки',
-    price: 70000,
+    itemName: 'Пиджак',
+    itemDescription: 'Ну очень модный пиджак',
+    price: 5000,
   },
 ];
-const ItemList = () => {
+
+const ItemsList = () => {
   return (
-    <div className={style.items_list_wrapper}>
-      <p>Список товаров</p>
+    <div className={style.items_list__wrapper}>
+      <p>Список товаров:</p>
       <div className={style.items_list}>
         {ItemsMock.map((item) => {
-          const { id, itemName, itemDescreption } = item;
-          return <Item key={`ID: ${id}`} name={itemName} descreption={itemDescreption} />;
+          const { id, itemName, itemDescription } = item;
+          return <Item key={`ID: ${id}`} name={itemName} description={itemDescription} />;
         })}
-
-        {/* <Item name={ItemsMock.itemName} descreption={ItemsMock.itemDescreption} />
-        <Item name="Шапка" descreption="Очень красивая шапка" />
-        <Item name={ItemsMock.itemName} descreption={ItemsMock.itemDescreption} />
-        <Item name={ItemsMock.itemName} descreption={ItemsMock.itemDescreption} /> */}
+        {/* <Item name={ItemsMock.itemName} description={ItemsMock.itemDescription} />
+        <Item name="Шапка" description="Очень красивая шапка" />
+        <Item name={ItemsMock.itemName} description={ItemsMock.itemDescription} />
+        <Item name={ItemsMock.itemName} description={ItemsMock.itemDescription} /> */}
       </div>
     </div>
   );
 };
 
-export default ItemList;
+export default ItemsList;

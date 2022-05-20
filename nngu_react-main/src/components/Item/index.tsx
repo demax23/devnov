@@ -3,16 +3,17 @@ import style from './Item.module.scss';
 
 interface IItem {
   name: string;
-  descreption: string;
+  description: string;
 }
+
 const Item: FC<IItem> = (props) => {
-  const { name, descreption } = props;
+  const { name, description } = props;
 
   return (
     <div className={style.item_container}>
       <p>{name}</p>
-      <p>Описание</p>
-      <p>{descreption}</p>
+      <p>Описание:</p>
+      <p>{description}</p>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-.items_list_wrapper {
+.items_list__wrapper {
   padding: 10px;
   flex: 1 0 auto;
 }
@@ -6,5 +6,5 @@
 .items_list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
