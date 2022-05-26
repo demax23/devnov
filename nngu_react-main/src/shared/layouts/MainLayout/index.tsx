@@ -9,10 +9,9 @@ interface IMainLayout {
 
 const MainLayout: React.FC<IMainLayout> = ({ children }) => {
   return (
-    <div>
+    <div className={style.page_wrapper}>
       <Header />
-      <div className={style.page_wrapper}>{children}</div>
-
+      <div className={style.content_wrapper}>{children}</div>
       <Footer />
     </div>
   );
