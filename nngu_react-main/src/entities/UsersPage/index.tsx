@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { usersUrl } from '../../api/constats';
 import { IUsers } from '../../interfaces/IUsers';
-import UsersPageComponente from './components/UsersPageComponente';
+import UsersPageComponent from './components/UsersPageComponent';
 
-const UserPage = () => {
-  const [usersData, setUsersData] = useState<IUsers | null>(null);
+const UsersPage = () => {
+  const [usersData, setUsersData] = useState<IUsers[] | null>(null);
+
+  const getData = async (url: string) => {
+    const response = await fetch(url);
+    const data = await response.json();
+    setUsersData(data);
+  };
+
   useEffect(() => {
-    fetch(usersUrl)
-      .then((response) => response.json())
-      .then((data) => console.log(data));
+    setTimeout(() => {
+      getData(usersUrl);
+    }, 1500);
   }, []);
 
-  return <UsersPageComponente usersDataAtrr={usersData} />;
+  return !usersData ? <div>Загрузка...</div> : <UsersPageComponent usersDataAttr={usersData} />;
 };
 
-export default UserPage;
+export default UsersPage;
