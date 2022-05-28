@@ -1,11 +1,19 @@
-import React, { FC } from "react";
-import { IUsers } from '../../../layouts/PageLayout/interface'
+import React, { FC } from 'react';
+import { IUsers } from '../../../interfaces/IUsers';
 
 interface IProps {
-    usersData
+  usersDataAtrr: IUsers | null;
 }
-const UsersPageComponente: FC<IProps> {} => {
-return <div>Components</div>
-}
+const UsersPageComponente: FC<IProps> = ({ usersDataAtrr }) => {
+  console.log(usersDataAtrr);
+  return (
+    <div>
+      <p>Список пользователей</p>
+      <div>{
+          usersDataAtrr? () : () 
+          }</div>
+    </div>
+  );
+};
 
 export default UsersPageComponente;
