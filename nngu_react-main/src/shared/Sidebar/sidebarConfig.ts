@@ -1,10 +1,10 @@
 export const sidebarConfig = [
   {
     id: 1,
-    name: 'asd',
+    name: 'Страница пользователей',
   },
   {
     id: 2,
-    name: 'asd ',
+    name: 'Тестовая страница',
   },
 ];

@@ -6,7 +6,7 @@ const TestPage = () => {
   return (
     <>
       <button type="button" onClick={() => setIsShow((prev) => !prev)}>
-        показать иил скрыть компонент
+        Показать или скрыть компонент
       </button>
       <hr />
       {isShow && <TestPageComponent />}

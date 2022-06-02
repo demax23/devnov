@@ -4,11 +4,11 @@ import style from './Sidebar.module.scss';
 
 const Sidebar = () => {
   return (
-    <div className={style.sidebar.wrapper}>
+    <div className={style.sidebar_wrapper}>
       <ul className={style.sidebar_menu}>
         {sidebarConfig.map((menuItem) => {
           return (
-            <li key={menuItem.id} className={style.sidebar.menu_item}>
+            <li key={menuItem.id} className={style.sidebar_menu_item}>
               {menuItem.name}
             </li>
           );
